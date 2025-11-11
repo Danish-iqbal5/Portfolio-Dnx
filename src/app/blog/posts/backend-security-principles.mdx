@@ -1,0 +1,87 @@
+---
+title: "Backend Security Principles Every Developer Should Know"
+description: "Essential practices to protect your APIs, databases, and infrastructure."
+date: "2025-10-28"
+image: "/images/blog/backend-security.jpg"
+---
+
+# Backend Security Principles Every Developer Should Know
+
+Security isn't a feature—it's a foundation. Here are the top backend security principles I follow when building any system, from authentication layers to API hardening.
+
+## 1. Authentication & Authorization
+
+### JWT Best Practices
+- Keep tokens short-lived
+- Use refresh token rotation
+- Implement proper token storage
+- Add claims validation
+
+```javascript
+// Example of secure JWT implementation
+const generateTokens = (user) => {
+  const accessToken = jwt.sign(
+    { userId: user.id },
+    process.env.JWT_SECRET,
+    { expiresIn: '15m' }
+  );
+  
+  const refreshToken = crypto.randomBytes(40).toString('hex');
+  // Store refresh token securely...
+  
+  return { accessToken, refreshToken };
+};
+```
+
+## 2. Input Validation & Sanitization
+
+Always validate and sanitize input at every layer:
+
+```javascript
+const validateUser = (input) => {
+  const schema = Joi.object({
+    email: Joi.string().email().required(),
+    password: Joi.string()
+      .min(8)
+      .pattern(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/)
+      .required(),
+  });
+  
+  return schema.validate(input);
+};
+```
+
+## 3. Rate Limiting & DOS Protection
+
+Implement rate limiting to protect your APIs:
+
+```javascript
+const rateLimit = require('express-rate-limit');
+
+const apiLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100 // limit each IP to 100 requests per windowMs
+});
+
+app.use('/api/', apiLimiter);
+```
+
+## 4. Secure Data Handling
+
+### Database Security
+- Use parameterized queries
+- Implement proper access controls
+- Encrypt sensitive data
+- Regular backups and monitoring
+
+## 5. Infrastructure Security
+
+- Keep dependencies updated
+- Use security headers
+- Implement proper CORS
+- Regular security audits
+- Monitor for vulnerabilities
+
+## Conclusion
+
+Security should be built into every layer of your application from the start. Regular audits and updates are crucial for maintaining a secure system.

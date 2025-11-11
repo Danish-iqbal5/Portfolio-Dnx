@@ -12,6 +12,8 @@ import {
   HiOutlineDocument,
   HiOutlineGlobeAsiaAustralia,
   HiOutlineRocketLaunch,
+  HiLockClosed,
+  HiShieldCheck,
 } from "react-icons/hi2";
 
 import {
@@ -27,6 +29,13 @@ import {
   SiNextdotjs,
   SiFigma,
   SiSupabase,
+  SiNodedotjs,
+  SiDjango,
+  SiExpress,
+  SiDocker,
+  SiKubernetes,
+  SiTypescript,
+  SiReact,
 } from "react-icons/si";
 
 import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
@@ -58,6 +67,15 @@ export const iconLibrary: Record<string, IconType> = {
   nextjs: SiNextdotjs,
   supabase: SiSupabase,
   figma: SiFigma,
+  nodejs: SiNodedotjs,
+  django: SiDjango,
+  express: SiExpress,
+  docker: SiDocker,
+  kubernetes: SiKubernetes,
+  typescript: SiTypescript,
+  react: SiReact,
+  shield: HiShieldCheck,
+  lock: HiLockClosed,
   facebook: FaFacebook,
   pinterest: FaPinterest,
   whatsapp: FaWhatsapp,

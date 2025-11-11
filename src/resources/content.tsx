@@ -2,39 +2,32 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Danish",
+  lastName: "Iqbal",
+  name: `Danish Iqbal`,
+  role: "Full Stack Engineer",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "ik340779@gmail.com",
+  location: "Asia/Karachi", // Peshawar, Pakistan falls under Asia/Karachi timezone
+  languages: ["English", "Urdu"],
 };
 
 const newsletter: Newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  display: false,
+  title: <></>,
+  description: <></>,
 };
 
 const social: Social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/Danish-iqbal5",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/danish-iqbal-08a258275/",
   },
   {
     name: "Email",
@@ -47,34 +40,15 @@ const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  title: "Danish Iqbal — Full Stack Engineer",
+  description: "Portfolio of Danish Iqbal, a passionate Full Stack Engineer skilled in Node.js, Django, and React, focused on building secure and high-performance web systems.",
+  headline: <>I design and build powerful backend systems and modern full-stack solutions.</>,
   featured: {
     display: true,
-    title: (
-      <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
-        <Line background="brand-alpha-strong" vert height="20" />
-        <Text marginRight="4" onBackground="brand-medium">
-          Featured work
-        </Text>
-      </Row>
-    ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    title: "Flight Management System",
+    href: "/work/flights-system",
   },
-  subline: (
-    <>
-      I'm Selene, a design engineer at{" "}
-      <Logo
-        dark
-        icon="/trademarks/wordmark-dark.svg"
-        style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
-      />
-      , where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
-    </>
-  ),
+  subline: <>I'm a backend and full-stack engineer with a passion for secure architectures, clean APIs, and smooth developer experience. My projects combine performance, reliability, and design clarity.</>,
 };
 
 const about: About = {
@@ -90,151 +64,143 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
-    link: "https://cal.com",
+    display: false,
+    link: "",
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "About Me",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I'm Danish Iqbal, a Full Stack Engineer from Peshawar, Pakistan. I specialize in backend development 
+        using Node.js and Django, and build dynamic frontends using React and Next.js. I'm also interested 
+        in cybersecurity, system engineering, and firmware development. My goal is to build secure and 
+        scalable software that makes a real impact.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Freelance & Personal Projects",
+        timeframe: "2023 - Present",
+        role: "Full Stack Engineer",
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
+          <>Developed scalable backend systems with Node.js and Django.</>,
+          <>Built secure authentication, role-based permissions, and dynamic API-driven UIs.</>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/projects/flights-system/cover-01.jpg",
+            alt: "Flight Management System",
             width: 16,
             height: 9,
           },
         ],
-      },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
-        ],
-        images: [],
       },
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "CECOS University of IT and Emerging Sciences",
+        description: <>Bachelor of Science in Computer Science (2022 – 2026)</>,
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Backend Development",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Building REST APIs, authentication, and secure systems with Node.js and Django.</>
         ),
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "Node.js",
+            icon: "nodejs",
           },
           {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "Django",
+            icon: "django",
+          },
+          {
+            name: "Express.js",
+            icon: "express",
           },
         ],
+        images: [],
       },
       {
-        title: "Next.js",
+        title: "Frontend Development",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Building fast, responsive interfaces with React and Next.js.</>
         ),
         tags: [
           {
-            name: "JavaScript",
-            icon: "javascript",
+            name: "React",
+            icon: "react",
           },
           {
             name: "Next.js",
             icon: "nextjs",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "TypeScript",
+            icon: "typescript",
           },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
+        images: [],
+      },
+      {
+        title: "DevOps & Deployment",
+        description: (
+          <>Containerization and deployment using Docker, Kubernetes, and CI/CD pipelines.</>
+        ),
+        tags: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "Docker",
+            icon: "docker",
+          },
+          {
+            name: "Kubernetes",
+            icon: "kubernetes",
           },
         ],
-      },  
+        images: [],
+      },
+      {
+        title: "Cybersecurity & Systems",
+        description: (
+          <>Exploring secure backend architectures, authentication mechanisms, and network systems.</>
+        ),
+        tags: [
+          {
+            name: "CEH",
+            icon: "shield",
+          },
+          {
+            name: "Network Security",
+            icon: "lock",
+          },
+        ],
+        images: [],
+      },
     ],
   },
 };
 
 const blog: Blog = {
-  path: "/blog",
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  path: "",
+  label: "",
+  title: "",
+  description: "",
 };
 
 const work: Work = {
@@ -247,54 +213,17 @@ const work: Work = {
 };
 
 const gallery: Gallery = {
-  path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
+  path: "",
+  label: "",
+  title: "",
+  description: "",
+  images: [],
 };
 
 export { person, social, newsletter, home, about, blog, work, gallery };
+// Whitelist of project slugs to include on the site. Only these project files will be listed.
+export const allowedProjectSlugs = [
+  "flights-system",
+  "saas-ecommerce-platform",
+  "permissions-system",
+];

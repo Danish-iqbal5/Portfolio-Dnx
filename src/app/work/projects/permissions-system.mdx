@@ -1,0 +1,61 @@
+---
+title: "Permissions & Authentication System"
+description: "Backend service managing authentication, permissions, and roles for SaaS apps."
+date: "2023-07-15"
+image: "/images/projects/permissions-system/cover-01.jpg"
+tags:
+  - Django
+  - REST Framework
+  - Authentication
+  - RBAC
+repo: "https://github.com/Danish-iqbal5/Permissions"
+---
+
+# Permissions System
+
+A Django-based authentication and permissions service providing role-based access control for multi-tenant SaaS applications.
+
+## Core Features
+
+- Fine-grained role-based access control (RBAC)
+- Multi-tenant architecture support
+- Custom permission classes and decorators
+- API key management
+- Audit logging for security events
+- User session management
+
+## Technical Implementation
+
+### Authentication System
+- JWT-based authentication with refresh tokens
+- Social auth integration capabilities
+- Two-factor authentication support
+- Password policy enforcement
+- Session management and invalidation
+
+### Permissions Framework
+- Hierarchical role management
+- Dynamic permission assignment
+- Resource-level access control
+- Permission inheritance
+- Group-based permissions
+
+## Security Measures
+
+- Secure token handling
+- Rate limiting and brute force protection
+- Regular security audits
+- Comprehensive logging
+- OWASP security guidelines compliance
+
+## API Documentation
+
+The system includes detailed API documentation using drf-spectacular, making it easy for other services to integrate with the permissions system.
+
+## Testing & Quality
+
+- Comprehensive test suite with pytest
+- Integration tests for all endpoints
+- Security vulnerability scanning
+- Performance benchmarking
+- Code quality checks with pylint

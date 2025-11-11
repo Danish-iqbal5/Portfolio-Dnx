@@ -8,6 +8,7 @@ export {
   blog,
   work,
   gallery,
+  allowedProjectSlugs,
 } from "./content";
 
 export {

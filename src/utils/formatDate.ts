@@ -1,11 +1,15 @@
-export function formatDate(date: string, includeRelative = false) {
+export function formatDate(date: string | undefined | null, includeRelative = false) {
+  // Defensive: if date is missing, return an empty string (caller can choose how to display)
+  if (!date) return "";
+
   const currentDate = new Date();
 
-  if (!date.includes("T")) {
+  // If date doesn't contain a time portion, normalize it to a full ISO-like string
+  if (typeof date === "string" && !date.includes("T")) {
     date = `${date}T00:00:00`;
   }
 
-  const targetDate = new Date(date);
+  const targetDate = new Date(date as string);
   const yearsAgo = currentDate.getFullYear() - targetDate.getFullYear();
   const monthsAgo = currentDate.getMonth() - targetDate.getMonth();
   const daysAgo = currentDate.getDate() - targetDate.getDate();
@@ -22,15 +26,17 @@ export function formatDate(date: string, includeRelative = false) {
     formattedDate = "Today";
   }
 
-  const fullDate = targetDate.toLocaleString("en-us", {
+  const fullDate = isNaN(targetDate.getTime())
+    ? ""
+    : targetDate.toLocaleString("en-us", {
     month: "long",
     day: "numeric",
     year: "numeric",
-  });
+    });
 
   if (!includeRelative) {
     return fullDate;
   }
 
-  return `${fullDate} (${formattedDate})`;
+  return fullDate ? `${fullDate} (${formattedDate})` : formattedDate;
 }
