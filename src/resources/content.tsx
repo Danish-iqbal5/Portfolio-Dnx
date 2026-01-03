@@ -6,7 +6,7 @@ const person: Person = {
   lastName: "Iqbal",
   name: `Danish Iqbal`,
   role: "Full Stack Engineer",
-  avatar: "/images/avatar.jpg",
+  avatar: "/images/avatar.jpeg",
   email: "ik340779@gmail.com",
   location: "Asia/Karachi", // Peshawar, Pakistan falls under Asia/Karachi timezone
   languages: ["English", "Urdu"],
@@ -92,14 +92,18 @@ const about: About = {
           <>Built secure authentication, role-based permissions, and dynamic API-driven UIs.</>,
         ],
         images: [
-          {
-            src: "/images/projects/flights-system/cover-01.jpg",
-            alt: "Flight Management System",
-            width: 16,
-            height: 9,
-          },
-        ],
+          ],
       },
+        {
+          company: "Dynamics Solutions and Technology — Lahore",
+          timeframe: "Aug 2025 - Oct 2025",
+          role: "Full Stack Dev Intern",
+          achievements: [
+            <>Completed a two-month internship working on full-stack features and integrations.</>,
+            <>Contributed to backend APIs, frontend components, and testing workflows.</>,
+          ],
+          images: [],
+        },
     ],
   },
   studies: {
@@ -108,7 +112,11 @@ const about: About = {
     institutions: [
       {
         name: "CECOS University of IT and Emerging Sciences",
-        description: <>Bachelor of Science in Computer Science (2022 – 2026)</>,
+        description: (
+          <>
+            BS Computer Science — expected 2023 - 2027. Current CGPA: 3.2.
+          </>
+        ),
       },
     ],
   },

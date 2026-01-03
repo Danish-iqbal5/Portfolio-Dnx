@@ -45,6 +45,10 @@ export default async function RootLayout({
       )}
     >
       <head>
+        <link rel="icon" href="/images/avatar.jpeg" type="image/jpeg" />
+        <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+        <link rel="apple-touch-icon" href="/images/avatar.jpeg" />
+        <meta name="theme-color" content="#ffffff" />
         <script
           id="theme-init"
           dangerouslySetInnerHTML={{
@@ -162,6 +166,30 @@ export default async function RootLayout({
               <RouteGuard>{children}</RouteGuard>
             </Flex>
           </Flex>
+          {/* Floating resume button */}
+          <a
+            href="/resume.pdf"
+            title="Resume"
+            aria-label="Open resume page"
+            style={{
+              position: "fixed",
+              bottom: 24,
+              right: 24,
+              zIndex: 9999,
+              background: "var(--brand-background-strong, #06b6d4)",
+              color: "#fff",
+              padding: "10px 14px",
+              borderRadius: "999px",
+              boxShadow: "0 6px 18px rgba(0,0,0,0.2)",
+              textDecoration: "none",
+              fontWeight: 600,
+            }}
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+          >
+            Resume
+          </a>
           <Footer />
         </Column>
       </Providers>

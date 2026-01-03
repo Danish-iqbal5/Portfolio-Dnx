@@ -1,0 +1,52 @@
+---
+title: "AI-Powered Code Reviewer (MERN)"
+description: "A MERN-stack experiment integrating Gemini for intelligent code feedback."
+date: "2024-06-15"
+image: "/images/projects/mern-ai-code-reviewer/cover-01.jpg"
+tags:
+  - MERN
+  - React
+  - Node.js
+  - Gemini
+repo: "https://github.com/Danish-iqbal5/mern-ai-code-reviewer"
+---
+
+# AI-Powered Code Reviewer (MERN)
+
+A lightweight MERN-stack project built in 2024 as an experiment in combining modern frontend tooling with server-side AI-driven code analysis. The app uses React for a responsive UI, Express/Node for the API layer, and a minimal in-memory approach for state (no persistent database yet).
+
+## What it does
+
+- Sends code snippets to a Gemini-powered review endpoint and surfaces suggestions inline.
+- Provides syntax-aware highlighting and inline annotations for clarity.
+- Focused on developer ergonomics: simple paste-and-review workflow, with the ability to copy improved suggestions.
+
+### Built
+
+- Simple React frontend for pasting and reviewing code snippets.
+- Express + Node backend that forwards requests to the Gemini model API.
+- No database — session state is kept in-memory for the prototype.
+
+## Why it matters
+
+This project demonstrates how standard web stacks can be combined with large-model reasoning to bootstrap developer tooling. Rather than replacing human reviewers, it accelerates routine checks and surfaces improvement opportunities during early development.
+
+## Technical details
+
+- Frontend: React, TypeScript, simple component-driven layout
+- Backend: Node.js + Express, small review endpoint that forwards requests to Gemini-style model APIs
+- Persistence: None (in-memory session state) — designed as a prototype
+- Auth: Minimal session handling; not intended for production
+
+## Notes
+
+- The Gemini API keys are expected to be provided via server environment variables and secure secrets management in production.
+- No database is used for now; project focused on model integration and UX.
+
+## Repository
+
+Find source and examples at: https://github.com/Danish-iqbal5/mern-ai-code-reviewer
+
+## Impact
+
+This prototype helped validate product ideas for automated code suggestions and informed later projects that layered persistent storage, collaboration features, and more robust evaluation metrics on top of the core review flow.
