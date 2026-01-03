@@ -48,7 +48,7 @@ const home: Home = {
     title: "Flight Management System",
     href: "/work/flights-system",
   },
-  subline: <>I'm a backend and full-stack engineer with a passion for secure architectures, clean APIs, and smooth developer experience. My projects combine performance, reliability, and design clarity.</>,
+  subline: <>I&apos;m a backend and full-stack engineer with a passion for secure architectures, clean APIs, and smooth developer experience. My projects combine performance, reliability, and design clarity.</>,
 };
 
 const about: About = {
@@ -72,8 +72,8 @@ const about: About = {
     title: "About Me",
     description: (
       <>
-        I'm Danish Iqbal, a Full Stack Engineer from Peshawar, Pakistan. I specialize in backend development 
-        using Node.js and Django, and build dynamic frontends using React and Next.js. I'm also interested 
+        I&apos;m Danish Iqbal, a Full Stack Engineer from Peshawar, Pakistan. I specialize in backend development 
+        using Node.js and Django, and build dynamic frontends using React and Next.js. I&apos;m also interested 
         in cybersecurity, system engineering, and firmware development. My goal is to build secure and 
         scalable software that makes a real impact.
       </>
