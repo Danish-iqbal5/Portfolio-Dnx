@@ -14,7 +14,7 @@ export default function ResumePage() {
           <Text variant="display-default-l">{person.name}</Text>
           <Text variant="display-default-m">{person.role}</Text>
 
-          <Text variant="subheading">Download</Text>
+          <Text variant="display-default-m">Download</Text>
           <Row gap="8">
             <Button href="/resume.pdf" variant="primary" size="m">
               Download Resume (PDF)
@@ -24,19 +24,19 @@ export default function ResumePage() {
             </Button>
           </Row>
 
-          <Text variant="subheading">Summary</Text>
+          <Text variant="display-default-m">Summary</Text>
           <Text>
             Danish Iqbal is a Full Stack Engineer. This page is a lightweight resume view — a
             downloadable PDF is available below and via the floating Resume button.
           </Text>
 
-          <Text variant="subheading">Experience (Highlights)</Text>
+          <Text variant="display-default-m">Experience (Highlights)</Text>
           <ul>
             <li>Full Stack Engineer — Freelance & Personal Projects (2023 - Present)</li>
             <li>Full Stack Dev Intern — Dynamics Solutions and Technology, Lahore (Aug 2025 - Oct 2025)</li>
           </ul>
 
-          <Text variant="subheading">Contact</Text>
+          <Text variant="display-default-m">Contact</Text>
           <Text>{person.email} • +92 313 5758807</Text>
         </Row>
       </Card>
