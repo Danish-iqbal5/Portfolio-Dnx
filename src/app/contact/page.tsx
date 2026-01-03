@@ -11,8 +11,8 @@ export default function ContactPage() {
     <Row fillWidth padding="12" horizontal="center">
       <Card maxWidth="m" padding="12">
         <Row direction="column" gap="8">
-          <Text variant="heading-s">Contact</Text>
-          <Text variant="body-default-m">Get in touch</Text>
+          <Text variant="display-default-l">Contact</Text>
+          <Text variant="display-default-m">Get in touch</Text>
 
           <Text>Email</Text>
           <Text>

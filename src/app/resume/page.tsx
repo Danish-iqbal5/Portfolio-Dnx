@@ -11,8 +11,8 @@ export default function ResumePage() {
     <Row fillWidth padding="12" horizontal="center">
       <Card maxWidth="m" padding="12">
         <Row direction="column" gap="8">
-          <Text variant="heading-s">{person.name}</Text>
-          <Text variant="body-default-m">{person.role}</Text>
+          <Text variant="display-default-l">{person.name}</Text>
+          <Text variant="display-default-m">{person.role}</Text>
 
           <Text variant="subheading">Download</Text>
           <Row gap="8">
