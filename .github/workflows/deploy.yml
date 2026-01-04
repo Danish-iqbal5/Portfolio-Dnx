@@ -1,9 +1,10 @@
-name: Build and Deploy to GitHub Pages
+name: Build and Deploy to GitHub Pages (manual)
 
+# Changed to manual trigger to avoid automatic failed runs when using Vercel.
+# If you still want automatic GitHub Pages deploys, you'll need to ensure the
+# site is fully static (no API routes) and remove or adjust the App Router usage.
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   build:
